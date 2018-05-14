@@ -9,8 +9,6 @@ $(window).scroll(function () {
 		}else{
 			$(this).removeClass('activeAnimation');
 		}
-		
-		
 	});
 	
 });

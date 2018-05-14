@@ -21,71 +21,54 @@ html, html body {
     z-index: 2; }
     #firstscreen .section-text h1 {
       margin: 0;
-      opacity: 0;
       font-size: 3em; }
     #firstscreen .section-text h3 {
-      opacity: 0;
       font-size: 2em; }
 
 #firstscreen.activeAnimation .corner-img {
-  -webkit-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
-  -moz-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
-  -o-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
-  animation: cornerimg 2s ease-in-out 0s 1 normal forwards; }
+  -webkit-animation: cornerimg 2s ease-in-out 0s 1 normal both;
+  -moz-animation: cornerimg 2s ease-in-out 0s 1 normal both;
+  -o-animation: cornerimg 2s ease-in-out 0s 1 normal both;
+  animation: cornerimg 2s ease-in-out 0s 1 normal both; }
 
 #firstscreen.activeAnimation h1 {
-  -webkit-animation: heading 2s ease-in-out 1s 1 normal forwards;
-  -moz-animation: heading 2s ease-in-out 1s 1 normal forwards;
-  -o-animation: heading 2s ease-in-out 1s 1 normal forwards;
-  animation: heading 2s ease-in-out 1s 1 normal forwards; }
+  -webkit-animation: heading 2s ease-in-out 1s 1 normal both;
+  -moz-animation: heading 2s ease-in-out 1s 1 normal both;
+  -o-animation: heading 2s ease-in-out 1s 1 normal both;
+  animation: heading 2s ease-in-out 1s 1 normal both; }
 
 #firstscreen.activeAnimation h3 {
-  -webkit-animation: heading 2s ease-in-out 2s 1 normal forwards;
-  -moz-animation: heading 2s ease-in-out 2s 1 normal forwards;
-  -o-animation: heading 2s ease-in-out 2s 1 normal forwards;
-  animation: heading 2s ease-in-out 2s 1 normal forwards; }
+  -webkit-animation: heading 2s ease-in-out 2s 1 normal both;
+  -moz-animation: heading 2s ease-in-out 2s 1 normal both;
+  -o-animation: heading 2s ease-in-out 2s 1 normal both;
+  animation: heading 2s ease-in-out 2s 1 normal both; }
 
 #secondscreen {
   position: relative;
   height: 100%; }
-  #secondscreen .corner-img {
-    position: absolute;
-    width: 30%;
-    z-index: 1; }
-  #secondscreen .section-text {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  #secondscreen .floralsvg {
     position: absolute;
     height: 100%;
-    width: 100%;
-    z-index: 2; }
-    #secondscreen .section-text h1 {
-      margin: 0;
-      opacity: 0;
-      font-size: 3em; }
-    #secondscreen .section-text h3 {
-      opacity: 0;
-      font-size: 2em; }
+    width: 100%; }
+    #secondscreen .floralsvg svg {
+      height: 100%;
+      width: 100%; }
+      #secondscreen .floralsvg svg path {
+        stroke: #000;
+        fill: #000;
+        fill-opacity: 0;
+        stroke-width: .2;
+        stroke-dasharray: 800;
+        transition: all 0.5s ease; }
+    #secondscreen .floralsvg:hover path {
+      stroke: #f0f;
+      fill: #f0f; }
 
-#secondscreen.activeAnimation .corner-img {
-  -webkit-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
-  -moz-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
-  -o-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
-  animation: cornerimg 2s ease-in-out 0s 1 normal forwards; }
-
-#secondscreen.activeAnimation h1 {
-  -webkit-animation: heading 2s ease-in-out 1s 1 normal forwards;
-  -moz-animation: heading 2s ease-in-out 1s 1 normal forwards;
-  -o-animation: heading 2s ease-in-out 1s 1 normal forwards;
-  animation: heading 2s ease-in-out 1s 1 normal forwards; }
-
-#secondscreen.activeAnimation h3 {
-  -webkit-animation: heading 2s ease-in-out 2s 1 normal forwards;
-  -moz-animation: heading 2s ease-in-out 2s 1 normal forwards;
-  -o-animation: heading 2s ease-in-out 2s 1 normal forwards;
-  animation: heading 2s ease-in-out 2s 1 normal forwards; }
+#secondscreen.activeAnimation .floralsvg path {
+  -webkit-animation: svganim 3s ease-in-out 1s 1 normal both;
+  -moz-animation: svganim 3s ease-in-out 1s 1 normal both;
+  -o-animation: svganim 3s ease-in-out 1s 1 normal both;
+  animation: svganim 3s ease-in-out 1s 1 normal both; }
 
 @-webkit-keyframes cornerimg {
   0% {
@@ -154,3 +137,43 @@ html, html body {
   100% {
     transform: scale(1);
     opacity: 1.0; } }
+
+@-webkit-keyframes svganim {
+  0% {
+    stroke-dashoffset: 800; }
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0; }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1; } }
+
+@-moz-keyframes svganim {
+  0% {
+    stroke-dashoffset: 800; }
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0; }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1; } }
+
+@-ms-keyframes svganim {
+  0% {
+    stroke-dashoffset: 800; }
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0; }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1; } }
+
+@keyframes svganim {
+  0% {
+    stroke-dashoffset: 800; }
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0; }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1; } }
