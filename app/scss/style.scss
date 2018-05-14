@@ -1,0 +1,110 @@
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+@mixin animation ($delay, $duration, $animation, $easing, $count ) {
+	-webkit-animation:  $animation $duration $easing $delay $count normal forwards ;
+	-moz-animation:  $animation $duration $easing $delay $count normal forwards ;
+	-o-animation:  $animation $duration $easing $delay $count normal forwards ;
+	animation:  $animation $duration $easing $delay $count normal forwards ;
+}
+
+html {
+  &, body {
+    height: 100%;
+	margin:0;
+	padding:0;
+  }
+}
+#firstscreen{
+	position:relative;
+	height:100%;
+	.corner-img{
+		position:absolute;
+		width:30%;
+		z-index:1;
+	}
+	.section-text{
+		text-align:center;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		position:absolute;
+		height:100%;
+		width:100%;
+		z-index:2;
+		h1{
+			margin:0;
+			opacity: 0;
+			font-size:3em;
+			
+		}
+		h3{
+			opacity: 0;
+			font-size:2em;
+		}
+	}
+}
+#firstscreen{
+	&.activeAnimation{
+		.corner-img{@include animation (0s,2s, cornerimg, ease-in-out, 1)}
+		h1{@include animation (1s,2s, heading, ease-in-out, 1)}
+		h3{@include animation (2s,2s, heading, ease-in-out, 1)}
+	}
+}
+#secondscreen{
+	position:relative;
+	height:100%;
+	.corner-img{
+		position:absolute;
+		width:30%;
+		z-index:1;
+	}
+	.section-text{
+		text-align:center;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		position:absolute;
+		height:100%;
+		width:100%;
+		z-index:2;
+		h1{
+			margin:0;
+			opacity: 0;
+			font-size:3em;
+			
+		}
+		h3{
+			opacity: 0;
+			font-size:2em;
+		}
+	}
+}
+#secondscreen{
+	&.activeAnimation{
+		.corner-img{@include animation (0s,2s, cornerimg, ease-in-out, 1)}
+		h1{@include animation (1s,2s, heading, ease-in-out, 1)}
+		h3{@include animation (2s,2s, heading, ease-in-out, 1)}
+	}
+}
+@include keyframes(cornerimg) {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@include keyframes (heading) {
+    0%   { transform:scale(0.5); opacity:0.0; }
+    50%  { transform:scale(1.2); opacity:0.5; }
+    100% { transform:scale(1.0); opacity:1.0; }
+}

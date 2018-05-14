@@ -1,0 +1,156 @@
+html, html body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+#firstscreen {
+  position: relative;
+  height: 100%; }
+  #firstscreen .corner-img {
+    position: absolute;
+    width: 30%;
+    z-index: 1; }
+  #firstscreen .section-text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2; }
+    #firstscreen .section-text h1 {
+      margin: 0;
+      opacity: 0;
+      font-size: 3em; }
+    #firstscreen .section-text h3 {
+      opacity: 0;
+      font-size: 2em; }
+
+#firstscreen.activeAnimation .corner-img {
+  -webkit-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
+  -moz-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
+  -o-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
+  animation: cornerimg 2s ease-in-out 0s 1 normal forwards; }
+
+#firstscreen.activeAnimation h1 {
+  -webkit-animation: heading 2s ease-in-out 1s 1 normal forwards;
+  -moz-animation: heading 2s ease-in-out 1s 1 normal forwards;
+  -o-animation: heading 2s ease-in-out 1s 1 normal forwards;
+  animation: heading 2s ease-in-out 1s 1 normal forwards; }
+
+#firstscreen.activeAnimation h3 {
+  -webkit-animation: heading 2s ease-in-out 2s 1 normal forwards;
+  -moz-animation: heading 2s ease-in-out 2s 1 normal forwards;
+  -o-animation: heading 2s ease-in-out 2s 1 normal forwards;
+  animation: heading 2s ease-in-out 2s 1 normal forwards; }
+
+#secondscreen {
+  position: relative;
+  height: 100%; }
+  #secondscreen .corner-img {
+    position: absolute;
+    width: 30%;
+    z-index: 1; }
+  #secondscreen .section-text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2; }
+    #secondscreen .section-text h1 {
+      margin: 0;
+      opacity: 0;
+      font-size: 3em; }
+    #secondscreen .section-text h3 {
+      opacity: 0;
+      font-size: 2em; }
+
+#secondscreen.activeAnimation .corner-img {
+  -webkit-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
+  -moz-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
+  -o-animation: cornerimg 2s ease-in-out 0s 1 normal forwards;
+  animation: cornerimg 2s ease-in-out 0s 1 normal forwards; }
+
+#secondscreen.activeAnimation h1 {
+  -webkit-animation: heading 2s ease-in-out 1s 1 normal forwards;
+  -moz-animation: heading 2s ease-in-out 1s 1 normal forwards;
+  -o-animation: heading 2s ease-in-out 1s 1 normal forwards;
+  animation: heading 2s ease-in-out 1s 1 normal forwards; }
+
+#secondscreen.activeAnimation h3 {
+  -webkit-animation: heading 2s ease-in-out 2s 1 normal forwards;
+  -moz-animation: heading 2s ease-in-out 2s 1 normal forwards;
+  -o-animation: heading 2s ease-in-out 2s 1 normal forwards;
+  animation: heading 2s ease-in-out 2s 1 normal forwards; }
+
+@-webkit-keyframes cornerimg {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes cornerimg {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes cornerimg {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes cornerimg {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes heading {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.0; }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5; }
+  100% {
+    transform: scale(1);
+    opacity: 1.0; } }
+
+@-moz-keyframes heading {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.0; }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5; }
+  100% {
+    transform: scale(1);
+    opacity: 1.0; } }
+
+@-ms-keyframes heading {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.0; }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5; }
+  100% {
+    transform: scale(1);
+    opacity: 1.0; } }
+
+@keyframes heading {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.0; }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5; }
+  100% {
+    transform: scale(1);
+    opacity: 1.0; } }
